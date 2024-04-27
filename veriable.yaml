@@ -1,7 +1,11 @@
 ---
 - name: varibles in ansible
   hosts: localhost
+  vars:
+    cource: ansible
+    trainer: Pavan
+    duration: 120 hours
   tasks:
     - name: Variable with in ansible
       ansible.builtin.debug:
-        msg: "Message from cource ansible and trainer shiva with duration 120"
+        msg: "Message from {{cource}} with trainer {{trainer}} with duration {{duration}}"
