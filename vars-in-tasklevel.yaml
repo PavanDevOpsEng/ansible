@@ -8,7 +8,10 @@
   tasks:
     - name: calling variable from Task
       vars:
-        Date: 26April2024
-        Mighty: Birthday
+        Cource: DevOps
+        Trainer: shiva
       ansible.builtin.debug:
-        msg: "Today is {{Date}} and Mighty {{Mighty}}"
+        msg: "Today is {{Cource}} and Mighty {{Trainer}}"
+    - name: Global varibles
+      ansible.builtin.debug:
+        msg: "Today is {{Cource}} and Mighty {{Trainer}}"
