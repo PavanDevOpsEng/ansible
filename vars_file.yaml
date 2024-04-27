@@ -1,0 +1,10 @@
+---
+- name: varibels from file
+  hosts: localhost
+  vars_file:
+    vars.yaml
+  tasks: 
+    - name: variable from file
+      ansible.builtin.debug:
+        msg: "Today is {{Cource}} and Mighty {{Trainer}}"        
+     
