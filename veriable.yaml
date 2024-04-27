@@ -1,7 +1,7 @@
 ---
 - name: varibles in ansible
   hosts: localhost
-  task:
+  tasks:
   - name: Variable with in ansible
     ansible.builtin.debug:
     msg: "Message from cource ansible and trainer shiva with duration 120"
