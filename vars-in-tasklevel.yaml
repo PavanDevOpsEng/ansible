@@ -1,0 +1,14 @@
+---
+- name: Variable from Task level
+  hosts: localhost
+  vars: 
+    Cource: ansible
+    Trainer: Pavan
+    duration: 120 hours
+  tasks:
+    - name: calling variable from Task
+      vars:
+        Date: 26April2024
+        Mighty: Birthday
+      ansible.builtin.debug:
+        msg: "Today is {{Date}} and Mighty {{Mighty}}"
