@@ -5,9 +5,9 @@
     cource: DevOps
     Trainer: Pavan
     Tools:
-      - linux
-      - Java
-      - Aws
+    - linux
+    - Java
+    - Aws
     Experience: 
       DevOps: 3
       Aws: 4
