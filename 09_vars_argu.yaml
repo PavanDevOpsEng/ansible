@@ -1,0 +1,7 @@
+---
+- name: pass variables from CLI
+  hosts: localhost
+  tasks: 
+    - name: CLi
+      ansible.builtin.debug:
+        msg: "Hello {{USER}} and How are you"
