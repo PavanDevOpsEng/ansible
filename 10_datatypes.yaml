@@ -13,5 +13,6 @@
       Aws: 4
     RealtimeProject: true
   tasks: 
-    ansible.builtin.debug:
-      msg: "Today's {{cource}} , Tools covers {{Tools}} and {{Experience}}"
+    - name: variable
+      ansible.builtin.debug:
+        msg: "Today's {{cource}} , Tools covers {{Tools}} and {{Experience}}"
