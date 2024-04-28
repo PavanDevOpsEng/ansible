@@ -4,4 +4,4 @@
   tasks:
     - name: Printing variables from Inventory
       ansible.builtin.debug:
-        msg: "Hello Today we have training DevOps and Trainer Pavan"
+        msg: "Hello Today we have training {{Cource}} and Trainer {{Trainer}}"
