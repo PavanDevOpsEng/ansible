@@ -1,0 +1,17 @@
+---
+- name: data types
+  hosts: localhost
+  vars: 
+    cource: DevOps
+    Trainer: Pavan
+    Tools:
+      - linux
+      - Java
+      - Aws
+    Experience: 
+      DevOps: 3
+      Aws: 4
+    RealtimeProject: true
+  tasks: 
+    ansible.builtin.debug:
+      msg: "Today's {{cource}} , Tools covers {{Tools}} and {{Experience:}}"
