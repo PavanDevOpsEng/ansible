@@ -1,6 +1,7 @@
 ---
 - name: install niginx
   hosts: localhost
+  become: yes
   tasks: 
     - name: ensure nginx is at the latest version
       ansible.builtin.apt : name=nginx state=latest
