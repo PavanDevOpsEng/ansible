@@ -4,7 +4,7 @@
   become: yes
   tasks: 
     - name: ensure nginx is at the latest version
-      apt:
+      yum:
         name: nginx
         state: latest
     - name: start nginx
