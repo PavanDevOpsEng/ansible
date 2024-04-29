@@ -7,7 +7,6 @@
     ansible.builtin.file:
       path: /home/ec2-user/test/text.txt
       state: touch
-    register: file_name
+  - name: list the files in the path
     ansible.builtin.debug:
       msg: "File name is {{file_name}}"
-      
