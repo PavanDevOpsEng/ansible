@@ -1,7 +1,7 @@
 ---
 - name: Install nginx
   hosts: web
-  tasks: 
+  tasks: # Task 1 about the user
     - name: chek user status
       ansible.builtin.command: whoami
       register: USER
@@ -11,4 +11,19 @@
     - name: Check user is root or not
       debug:
         msg: "User is not a root user"
-      when: USER.stdout != 'root'    
+      when: USER.stdout != 'root' 
+  tasks: 
+    - name: ensure nginx is at the latest version
+      become: yes
+      yum:
+        name: nginx
+        state: latest
+    - name: start nginx
+      service: 
+        name: nginx
+        state: started
+        enabled: yes  # if you want to also enable nginx
+      register: State
+    - name: print if the nginx installed
+      debug:
+        msg: "Hello status is {{State}}"
