@@ -7,4 +7,4 @@
       register: TIME  
     - name: printing the variable
       ansible.builtin.debug:
-      msg: "Thank you {{TIME}}"
+        msg: "Thank you {{TIME}}"
