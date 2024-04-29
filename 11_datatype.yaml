@@ -8,3 +8,4 @@
     - name: printing the variable
       ansible.builtin.debug:
         msg: "Thank you {{TIME}}"
+      when: ansible_os_family == RedHat
