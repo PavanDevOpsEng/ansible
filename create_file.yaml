@@ -1,0 +1,9 @@
+---
+- name: create a file in taget server
+  hosts: web
+  become: true
+  tasks: 
+  - name: create a file
+    ansible.builtin.file:
+      path: /home/ec2-user/test/text.txt
+      state: touch
