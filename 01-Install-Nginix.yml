@@ -26,4 +26,4 @@
       register: State
     - name: print if the nginx installed
       debug:
-        msg: "Hello status is {{State}}"
+        msg: "Hello status is {{State.Result}}"
