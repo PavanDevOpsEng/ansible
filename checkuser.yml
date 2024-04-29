@@ -8,3 +8,7 @@
     - name: print user information
       debug:
         msg: "User is {{USER.stdout}}"
+    - name: Check user is root or not
+      debug:
+        when: USER.stdout != "root"
+        meg: "User is not a root user"
