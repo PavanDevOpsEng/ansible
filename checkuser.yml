@@ -10,5 +10,6 @@
         msg: "User is {{USER.stdout}}"
     - name: Check user is root or not
       debug:
-      when: USER.stdout != 'root'
         msg: "User is not a root user"
+      when: USER.stdout != 'root'
+
