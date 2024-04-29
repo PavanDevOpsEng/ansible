@@ -1,0 +1,10 @@
+---
+- name: Testing data types
+  hosts: localhost
+  tasks:
+    - name: simple command
+      ansible.builtin.shell: uptime
+      register: TIME  
+    - name: printing the variable
+      ansible.builtin.debug:
+      msg: "Thank you {{TIME}}"
