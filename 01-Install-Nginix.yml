@@ -12,7 +12,6 @@
       debug:
         msg: "User is not a root user"
       when: USER.stdout != 'root' 
-  tasks: 
     - name: ensure nginx is at the latest version
       become: yes
       yum:
