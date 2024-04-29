@@ -4,7 +4,7 @@
   tasks: 
     - name: chek user status
       ansible.builtin.command: whoami
-      register.stdout: USER
+      register: USER
     - name: print user information
       debug:
-        msg: "User is {{USER}}"
+        msg: "User is {{USER.stdout}}"
