@@ -12,7 +12,7 @@
         name: nginx
         state: started
         enabled: yes  # if you want to also enable nginx
-        register: State
+      register: State
     - name: print if the nginx installed
       debug:
         msg: "Hello status is {{State}}"
