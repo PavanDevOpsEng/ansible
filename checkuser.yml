@@ -11,4 +11,4 @@
     - name: Check user is root or not
       debug:
         when: USER.stdout != "root"
-        meg: "User is not a root user"
+        msg: "User is not a root user"
