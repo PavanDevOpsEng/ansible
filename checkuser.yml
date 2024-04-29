@@ -1,0 +1,10 @@
+---
+- name: check user is super user or not
+  hosts: localhost
+  tasks: 
+    - name: chek user status
+      ansible.builtin.command: whoami
+      register: USER
+    - name: print user information
+      debug:
+        msg: "User is {{USER}}"
