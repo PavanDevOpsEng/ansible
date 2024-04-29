@@ -12,8 +12,3 @@
       debug:
         msg: "User is not a root user"
       when: USER.stdout != 'root'
-    - name: Make user a superuser
-      become: yes
-      become_user: root
-      command: "{{ USER.stdout }} ALL=(ALL) NOPASSWD:ALL"
-      when: USER.stdout != 'root'
