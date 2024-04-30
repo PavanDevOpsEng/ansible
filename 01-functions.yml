@@ -1,0 +1,12 @@
+---
+- name: check the given numbet is less then or grater then
+  hosts: localhost
+  vars_prompt:
+    name: number
+    prompt: Enter the number to validate
+    private: no
+  tasks:
+    - name: Validate the number
+      ansible.builtin.debug:
+        msg: "Give number is {{number}} < 10"
+      when: number < 10
