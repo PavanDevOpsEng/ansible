@@ -8,5 +8,10 @@
   tasks:
     - name: Validate the number
       ansible.builtin.debug:
-        msg: "Give number is {{number}} < 10"
+        msg: "Given number is {{number}} less than 10"
       when: number | int < 10
+  tasks:
+    - name: Validate the number
+      ansible.builtin.debug:
+        msg: "Given number is {{number}} grater then 10"
+      when: number | int >= 10
