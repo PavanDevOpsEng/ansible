@@ -6,7 +6,7 @@
       ansible.builtin.debug:
         msg: "Hello {{Cource | default ('Ansible')}}"
 
-- name: Verifying upper case
+- name: Verifying upper case and lower case
   hosts: localhost
   vars:
     message: Hello I must say good morning
@@ -14,4 +14,5 @@
     - name: upper case
       ansible.builtin.debug:
         msg: "{{ message | upper }}"
+        msg: "{{ message | lower }}"
   
