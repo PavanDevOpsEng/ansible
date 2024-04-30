@@ -15,4 +15,11 @@
       ansible.builtin.debug:
         msg: "{{ message | upper }}"
         msg: "{{ message | lower }}"
-  
+
+- name: Remove duplicate in the list 
+  hosts: localhost
+  numbers: [1, 2, 3, 4, 4, 5, 5, 6]
+  tasks:
+    - name: uniqu numbers
+      ansible.builtin.debug:
+        msg: "{{ number | unique }}"
