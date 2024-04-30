@@ -22,4 +22,4 @@
   tasks:
     - name: uniqu numbers
       ansible.builtin.debug:
-        msg: "{{ number | unique }}"
+        msg: "{{ numbers | unique }}"
