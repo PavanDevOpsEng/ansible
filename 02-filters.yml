@@ -24,3 +24,18 @@
     - name: uniqu numbers
       ansible.builtin.debug:
         msg: "{{ numbers | unique }}"
+
+- name: Dictionary to list
+  hosts: localhost
+  vars: # this is called dictonary
+    my_dict:
+      Cource: DevOps
+      Trainer: Pavan
+      Duration: 120hr
+  tasks: 
+  - name: Dic to list
+    ansible.builtin.debug:
+      msg: "Before converstion {{ my_dict }}"
+  - name: After converstion
+    ansible.builtin.debug:
+      msg: " After converstion {{ my_dict | dict2items }}"
