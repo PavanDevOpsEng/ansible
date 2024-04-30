@@ -5,9 +5,13 @@
     - name: filter for default variable
       ansible.builtin.debug:
         msg: "Hello {{Cource | default ('Ansible')}}"
+
+- name: Verifying filters
+  hosts: localhost
+  vars:
+  message: "Hello I must say good morning"
   tasks:
-    - name: uppar case
-      vars: 
-      Message: "Hello Good Morning Pavan"
+    - name: upper case
       ansible.builtin.debug:
-        msg: "{{ Message | upper }}"
+        msg: "{{ message | upper }}"
+  
