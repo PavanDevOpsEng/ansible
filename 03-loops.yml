@@ -9,3 +9,13 @@
         - linux
         - shell
         - MySql
+
+- name: install pakages
+  hosts: localhost
+  ansible.builtin.dnf:
+    name: {{ item }}
+    state: latest
+  loop:
+  - nginx
+  - mysql
+  - postfix
