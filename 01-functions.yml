@@ -11,7 +11,7 @@
         msg: "Given number is {{number}} less than 10"
       when: number | int < 10
   tasks:
-    - name: Validate the number
+    - name: Validate given number
       ansible.builtin.debug:
         msg: "Given number is {{number}} grater then 10"
       when: number | int >= 10

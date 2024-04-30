@@ -1,0 +1,7 @@
+---
+- name: Verifying filters
+  hosts: localhost
+  tasks:
+    - name: filter for default variable
+      ansible.builtin.debug:
+        msg: "Hello {{Cource | deafult ('Ansible')}}"
