@@ -6,7 +6,7 @@
       ansible.builtin.debug:
         msg: "Hello {{Cource | default ('Ansible')}}"
 
-- name: Verifying filters
+- name: Verifying upper case
   hosts: localhost
   vars:
   message: "Hello I must say good morning"
