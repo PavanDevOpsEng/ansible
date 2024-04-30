@@ -9,7 +9,7 @@
 - name: Verifying upper case
   hosts: localhost
   vars:
-  message: "Hello I must say good morning"
+  message: Hello I must say good morning
   tasks:
     - name: upper case
       ansible.builtin.debug:
