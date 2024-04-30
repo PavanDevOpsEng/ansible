@@ -14,8 +14,6 @@
     - name: upper case
       ansible.builtin.debug:
         msg: "{{ message | upper }}"
-        
-        msg: "{{ message | lower }}"
 
 - name: Remove duplicate in the list 
   hosts: localhost

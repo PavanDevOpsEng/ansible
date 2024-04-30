@@ -10,8 +10,11 @@
       ansible.builtin.debug:
         msg: "Given number is {{number}} less than 10"
       when: number | int < 10
+- name: check the given numbet is grate then or grater then
+  hosts: localhost
   tasks:
     - name: Validate given number
       ansible.builtin.debug:
         msg: "Given number is {{number}} grater then 10"
       when: number | int >= 10
+      
