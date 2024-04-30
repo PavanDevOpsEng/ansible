@@ -9,4 +9,4 @@
     - name: Validate the number
       ansible.builtin.debug:
         msg: "Give number is {{number}} < 10"
-      when: number < 10
+      when: number | int < 10
