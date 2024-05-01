@@ -1,6 +1,6 @@
 ---
 - name: examples on register variable
-  hosts: db
+  hosts: localhost
   tasks: 
   - name: show the disk space
     ansible.builtin.shell: df -hT
