@@ -1,0 +1,10 @@
+---
+- name: examples on register variable
+  hosts: db
+  tasks: 
+  - name: show the disk space
+    ansible.builtin.shell: df -hT
+    register: disk_space
+  - name: print the disc disk_spac
+    ansible.builtin.debug:
+      msg: "{{disk_space}}"
