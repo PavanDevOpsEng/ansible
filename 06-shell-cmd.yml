@@ -3,8 +3,7 @@
   hosts: localhost
   tasks:
   - name: date display
-    ansible.builtin.shell: 
-      name: "date"
+    ansible.builtin.shell: date
     rigster: datecmd
   - name: display the date
     ansible.builtin.debug:
