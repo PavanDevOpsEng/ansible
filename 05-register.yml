@@ -7,4 +7,5 @@
     register: disk_space
   - name: print the disc disk_spac
     ansible.builtin.debug:
-      msg: "{{disk_space}}"
+      msg: "{{ item }}"
+    loop: "disk_space.stdout_lines"
