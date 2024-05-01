@@ -4,7 +4,7 @@
   tasks:
   - name: date display
     ansible.builtin.shell: date
-    rigster: datecmd
+    register: datecmd
   - name: display the date
     ansible.builtin.debug:
       msg: "{{datecmd}}"
