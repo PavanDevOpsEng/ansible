@@ -7,4 +7,4 @@
     register: datecmd
   - name: display the date
     ansible.builtin.debug:
-      msg: "{{datecmd}}"
+      msg: "{{ datecmd.stdout_lines }}"
